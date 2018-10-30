@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 def square(x):
     return x*x
@@ -18,5 +19,5 @@ def CentralDifference(f, x, h):
 
 for i in range(2, 8):
     h = 10**(-i)
-    print(h, abs(CentralDifference(np.sin, 0, h)))
+    print(h, abs(CentralDifference(np.sin, 0, h) - 1))
 
